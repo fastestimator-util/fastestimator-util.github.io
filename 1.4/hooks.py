@@ -40,9 +40,9 @@ def update_source_url(html):
     # Fix plots in jupyter notebook
     html = re.sub(r'(?<=<script type="text\/javascript">)\s*?require\(\["plotly"\], function\(Plotly\) {\s*?(?=window\.PLOTLYENV)', "", html)
     html = re.sub(r'\).then\(function\(\){.*?(?=<\/script>)', ')}', html, flags=re.S)
-    html = re.sub(r'<a href="installation\.html" class="md-nav__link md-nav__link(--active)?">\s*Install\s*</a>', fr'', html)
-    #html = re.sub(r'\.\.\/\.\.\/apphub\/(.+)\/(.+)\.ipynb', fr'http://127.0.0.1:8000/apphub/\2.html', html)
     html = re.sub(r'(\.[a-zA-Z0-9\/\._]+)\.ipynb', fr'\1.html', html)
+    html = re.sub(r'<a href="installation\.html" class="md-nav__link md-nav__link(--active)?">\s*Install\s*</a>', fr'', html)
+    
     # # Correct sizes of the plot to adjust to frame
     # html = re.sub(r'(?<=style="height:1000px; width:)\d+?px(?=;")', "100%", html)
     # html = re.sub(r'(?<="showlegend":\w+?),"width":\d+?,"height":\d+?(?=[},])', "", html)
