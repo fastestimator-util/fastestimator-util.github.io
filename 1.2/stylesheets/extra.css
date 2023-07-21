@@ -37,6 +37,16 @@
     margin-top: -29px;
 }
 
+.md-version {
+    flex-shrink: 0;
+    font-size: .7rem;
+    font-weight: normal;
+    height: 2.4rem;
+}
+
+.md-version__item {
+    line-height: 1.5rem;
+}
 
 :root {
 
