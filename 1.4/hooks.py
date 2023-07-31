@@ -34,13 +34,14 @@ def clean_search(config: MkDocsConfig):
 def update_source_url(html):
     pattern = r'(<a\s*href="https:\/\/github\.com\/fastestimator\/fastestimator\/)(raw)(\/\S+.)(md)"'
     html = re.sub(pattern, fr'\1blob\3py"', html)
+    html = re.sub(r'https:(.+)(\/blob\/)master(\/installation_docs.+).md', fr'https:\1\2r1.4\3.md', html)
 
     html = re.sub(r'<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text\/html">\s*?<script type="text\/javascript">.*?<\/script>\s*?<\/div>', "", html, flags=re.S)
 
     # Fix plots in jupyter notebook
     html = re.sub(r'(?<=<script type="text\/javascript">)\s*?require\(\["plotly"\], function\(Plotly\) {\s*?(?=window\.PLOTLYENV)', "", html)
     html = re.sub(r'\).then\(function\(\){.*?(?=<\/script>)', ')}', html, flags=re.S)
-    html = re.sub(r'(\.[a-zA-Z0-9\/\._]+)\.ipynb', fr'\1.html', html)
+    html = re.sub(r'<a href="(\.[a-zA-Z0-9\/\._]+)\.ipynb">', fr'<a href="\1.html">', html)
     html = re.sub(r'<a href="installation\.html" class="md-nav__link md-nav__link(--active)?">\s*Install\s*</a>', fr'', html)
     
     # # Correct sizes of the plot to adjust to frame
@@ -48,15 +49,15 @@ def update_source_url(html):
     # html = re.sub(r'(?<="showlegend":\w+?),"width":\d+?,"height":\d+?(?=[},])', "", html)
     return html
 
-
-# def on_page_content(html, page, config, files):
-#     print(page.title)
-#     html = update_plotly(html)
-#     html = update_source_url(html)
-#     return html
+def remove_source_and_download_button(html):
+    html = re.sub(r'<a href=(.+)(class="md-content__button md-icon")>', fr'<a href=\1\2 style="display:none">', html)
+    return html
+    
 
 def on_post_page(output, page, config):
     output = update_source_url(output)
+    if any([x in page.url for x in ['apphub', 'tutorial', 'installation']]):
+        output = remove_source_and_download_button(output)
     return output
 
 def on_post_build(config: MkDocsConfig):
