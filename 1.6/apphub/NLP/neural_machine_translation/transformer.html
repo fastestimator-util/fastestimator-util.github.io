@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -7927,7 +7929,7 @@ You're not viewing the latest version.
               <article class="md-content__inner md-typeset">
                 
 
-<a href="transformer.ipynb" title="Download Notebook" class="md-content__button md-icon">
+<a href="transformer.ipynb" title="Download Notebook" class="md-content__button md-icon" style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg>
 </a>
 
@@ -7940,7 +7942,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/NLP/neural_machine_translation/transformer.html" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/NLP/neural_machine_translation/transformer.ipynb" title="View source of this page" class="md-content__button md-icon" style="display:none">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -8968,13 +8970,13 @@ Licensed under the Apache License, Version 2.0.
     init_mathjax();
     </script>
 <!-- End of mathjax configuration --><div class="jupyter-wrapper">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9d89fc68">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a08f3811">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="neural-machine-translation-using-transformer">Neural Machine Translation Using Transformer<a class="anchor-link" href="#neural-machine-translation-using-transformer">¶</a></h1><p>[<a href="https://arxiv.org/abs/1706.03762">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer.html">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer_torch.py">Torch Implementation</a>]</p>
+<h1 id="neural-machine-translation-using-transformer">Neural Machine Translation Using Transformer<a class="anchor-link" href="#neural-machine-translation-using-transformer">¶</a></h1><p>[<a href="https://arxiv.org/abs/1706.03762">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer.ipynb">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/NLP/neural_machine_translation/transformer_torch.py">Torch Implementation</a>]</p>
 <p>In this tutorial we will look at a sequence to sequence task: translating one language into another. The architecture used for the task is the famous <code>Transformer</code>.</p>
 <p>The general idea behind the transformer architecture is the <code>attention</code> mechanism that can perform a re-weighting of the features throughout the network. Another advantage brought by the transformer architecture is that it breaks the temporal dependency of the data, allowing more efficient parallelization of training. We will implement every detail of the transformer in this tutorial. Let's get started!</p>
 <p>First let's define some hyper-parameters that we will use later.</p>
@@ -8982,7 +8984,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters" id="cell-id=9e979a49">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters" id="cell-id=92e577bc">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9026,7 +9028,7 @@ eval_steps_per_epoch=None</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=97ba5848">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a6f2348">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9037,7 +9039,7 @@ eval_steps_per_epoch=None</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c4420257">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=10cf85f2">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9068,7 +9070,7 @@ train_ds, eval_ds, test_ds = tednmt.load_data(data_dir, translate_option="pt_to_
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b04af841">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f5195273">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9079,7 +9081,7 @@ train_ds, eval_ds, test_ds = tednmt.load_data(data_dir, translate_option="pt_to_
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=82d2efd2">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=86d1fb0f">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9131,7 +9133,7 @@ amongst all the troubling deficits we struggle with today — we think of financ
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8e0e6cb1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d63c3d24">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9148,7 +9150,7 @@ amongst all the troubling deficits we struggle with today — we think of financ
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a343496a">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=98d86070">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9225,7 +9227,7 @@ pipeline = fe.Pipeline(
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e14effa">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a25d38e">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9236,7 +9238,7 @@ pipeline = fe.Pipeline(
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6db7e502">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4f136517">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9247,7 +9249,7 @@ pipeline = fe.Pipeline(
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b6ab2199">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2ff51034">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9325,7 +9327,7 @@ torch.Size([64, 70])
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=000a94d2">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=11f6b259">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9336,7 +9338,7 @@ torch.Size([64, 70])
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8703de4a">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7d822f14">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9404,7 +9406,7 @@ def point_wise_feed_forward_network(em_dim, dff):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=69f38668">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f8ed0ed">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9420,7 +9422,7 @@ def point_wise_feed_forward_network(em_dim, dff):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=341aa738">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f032c244">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9507,7 +9509,7 @@ class MultiHeadAttention(layers.Layer):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=505a6483">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=179d87a6">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9518,7 +9520,7 @@ class MultiHeadAttention(layers.Layer):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4d3542fc">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e7174445">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9631,7 +9633,7 @@ class DecoderLayer(layers.Layer):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c218a70a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e9c0c7a1">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9642,7 +9644,7 @@ class DecoderLayer(layers.Layer):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=62fd6e23">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9f7d843e">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9807,7 +9809,7 @@ def transformer(num_layers, em_dim, num_heads, dff, input_vocab, target_vocab, m
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=61812888">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2eb82e49">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9852,7 +9854,7 @@ def transformer(num_layers, em_dim, num_heads, dff, input_vocab, target_vocab, m
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c7a07bc5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=047b8628">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9864,7 +9866,7 @@ def transformer(num_layers, em_dim, num_heads, dff, input_vocab, target_vocab, m
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a8ff6462">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9fbef182">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9987,7 +9989,7 @@ network = fe.Network(ops=[
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0c090010">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=18247941">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9998,7 +10000,7 @@ network = fe.Network(ops=[
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ed968b40">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e9454372">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10105,7 +10107,7 @@ estimator = fe.Estimator(pipeline=pipeline,
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bc6c927d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c98c23a">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10116,7 +10118,7 @@ estimator = fe.Estimator(pipeline=pipeline,
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0aa16260">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d4cb768c">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10143,7 +10145,7 @@ estimator = fe.Estimator(pipeline=pipeline,
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0bff50d0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=78603f6c">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10154,7 +10156,7 @@ estimator = fe.Estimator(pipeline=pipeline,
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=385777e5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=93811234">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10207,7 +10209,7 @@ grouth_truth = sample_test_data["target_real"].numpy()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=af981591">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=66826cc8">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10272,7 +10274,7 @@ thank you very much.
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6abc34d6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25ea37dc">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10387,16 +10389,16 @@ thank you very much.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip", "toc.follow"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
         <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
         <script src="../../../javascripts/version-mike.js"></script>
       

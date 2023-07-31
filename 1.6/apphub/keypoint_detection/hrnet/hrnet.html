@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -8039,7 +8041,7 @@ You're not viewing the latest version.
               <article class="md-content__inner md-typeset">
                 
 
-<a href="hrnet.ipynb" title="Download Notebook" class="md-content__button md-icon">
+<a href="hrnet.ipynb" title="Download Notebook" class="md-content__button md-icon" style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg>
 </a>
 
@@ -8052,7 +8054,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/keypoint_detection/hrnet/hrnet.html" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/keypoint_detection/hrnet/hrnet.ipynb" title="View source of this page" class="md-content__button md-icon" style="display:none">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -9080,13 +9082,13 @@ Licensed under the Apache License, Version 2.0.
     init_mathjax();
     </script>
 <!-- End of mathjax configuration --><div class="jupyter-wrapper">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74e84ebc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0f9b0ee1">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="high-resolution-net-for-keypoint-detection">High-Resolution Net for Keypoint Detection<a class="anchor-link" href="#high-resolution-net-for-keypoint-detection">¶</a></h1><p>[<a href="https://arxiv.org/abs/1902.09212">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet.html">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet_torch.py">Torch Implementation</a>]</p>
+<h1 id="high-resolution-net-for-keypoint-detection">High-Resolution Net for Keypoint Detection<a class="anchor-link" href="#high-resolution-net-for-keypoint-detection">¶</a></h1><p>[<a href="https://arxiv.org/abs/1902.09212">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet.ipynb">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/keypoint_detection/hrnet/hrnet_torch.py">Torch Implementation</a>]</p>
 <p>High-Resolution Net (HRNet) is a family of neural network architectures designed for handling vision tasks that require high-definition details from image. Some examples of such tasks are keypoint detection and small-object detection/segmentation.</p>
 <p>HRNet is an effort to address an important limitation of CNN designs: <strong>as network goes deeper, the detailed spatial information tends to get lost.</strong> This is mainly due to the common CNN design philosophy of "increasing channel, decreasing spatial size". As a result, CNNs often have a difficult time on small-scale objects.</p>
 <p>This is why many computer vision architecture uses multi-stage prediction to improve performance. For example, object detector nowadays (like YOLO, SOLO) rely on early stages of convolution features for smaller object detection and later convolution features for larger objects. Pyramid Network projects its high-level feature back to early stage to improve content richness. Unet concatenates features from encoder and decoder for all spatial dimensions.</p>
@@ -9096,7 +9098,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7b6e92dc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5ba1ef08">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9107,7 +9109,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4bda1d24">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f6ad2c1c">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9174,7 +9176,7 @@ from fastestimator.trace.trace import Trace</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=76126c74">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=13a68941">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9185,7 +9187,7 @@ from fastestimator.trace.trace import Trace</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters" id="cell-id=d3123cd1">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_parameters" id="cell-id=910d1be7">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9231,7 +9233,7 @@ cache_limit=None</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1837356f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=adf22667">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9242,7 +9244,7 @@ cache_limit=None</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=83b15f5e">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e7b61d9b">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9321,7 +9323,7 @@ Loading data --- 4952 / 4952
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fac6a673">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=77a77185">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9332,7 +9334,7 @@ Loading data --- 4952 / 4952
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1532c9d1">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=455d9972">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9399,7 +9401,7 @@ dataset sample:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1ac3b575">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3042a372">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9411,7 +9413,7 @@ dataset sample:
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=074a7ccb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=567f6d8a">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9434,7 +9436,7 @@ dataset sample:
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=55a958c5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8f50dbf2">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9601,7 +9603,7 @@ pipeline = fe.Pipeline(
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=304bcfe7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6372a511">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9612,7 +9614,7 @@ pipeline = fe.Pipeline(
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=90b7c2d1">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d573ebdd">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9667,7 +9669,7 @@ fig.show()</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cd52d9d7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c8a5ee2">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9678,7 +9680,7 @@ fig.show()</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9da0bcb6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e35abfa4">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9689,7 +9691,7 @@ fig.show()</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=95a3aadd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=82fe147a">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9716,7 +9718,7 @@ fig.show()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=69fa1bfe">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=04523e58">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9963,7 +9965,7 @@ def hrnet(input_shape=(256, 256, 3), num_classes=17):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=45d11b46">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7d8c12e7">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9975,7 +9977,7 @@ def hrnet(input_shape=(256, 256, 3), num_classes=17):
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=138d633c">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=65bc810f">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10016,7 +10018,7 @@ network = fe.Network(ops=[
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a932619a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=90d19eec">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10028,7 +10030,7 @@ network = fe.Network(ops=[
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=05530b88">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2533dbef">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10143,7 +10145,7 @@ traces = [
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1e19370d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f714d7c6">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10154,7 +10156,7 @@ traces = [
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e22212e5">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8245ed50">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10193,7 +10195,7 @@ est.fit()</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b4a6b4e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf8f909f">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10204,7 +10206,7 @@ est.fit()</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0c3e0657">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e074da4b">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10237,7 +10239,7 @@ sample_val_masks_pred = np.max(sample_val_batch["pred_mask"].numpy(), axis=-1) #
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8b4d14bc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2ffd26ad">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10248,7 +10250,7 @@ sample_val_masks_pred = np.max(sample_val_batch["pred_mask"].numpy(), axis=-1) #
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=effa4342">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=00969f7d">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10399,16 +10401,16 @@ fig.show()</div>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip", "toc.follow"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
         <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
         <script src="../../../javascripts/version-mike.js"></script>
       
