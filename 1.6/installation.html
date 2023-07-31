@@ -7951,7 +7951,9 @@ You're not viewing the latest version.
 
 <h3 id="1_install_dependencies">1. Install Dependencies<a class="headerlink" href="#1_install_dependencies" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Install TensorFlow</li>
+<li>
+<p>Install TensorFlow</p>
+<ul>
 <li>
 <p>Linux:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tensorflow</span><span class="o">==</span><span class="m">2</span>.11.1
@@ -7959,23 +7961,27 @@ You're not viewing the latest version.
 </li>
 <li>
 <p>Mac (M1/M2):
-        Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/master/installation_docs/mac_installation.md">installation guide</a></p>
+      Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/r1.6/installation_docs/mac_installation.md">installation guide</a></p>
 </li>
 <li>
 <p>Windows:
-        Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/master/installation_docs/tensorflow_windows_installation.md">installation guide</a></p>
+      Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/r1.6/installation_docs/tensorflow_windows_installation.md">installation guide</a></p>
+</li>
+</ul>
 </li>
 <li>
 <p>Install PyTorch</p>
-</li>
+<ul>
 <li>
 <p>CPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.0.1+cpu<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.15.2+cpu<span class="w"> </span><span class="nv">torchaudio</span><span class="o">==</span><span class="m">2</span>.0.2+cpu<span class="w"> </span>-f<span class="w"> </span>https://download.pytorch.org/whl/cpu/torch_stable.html
-</span></code></pre></div>
+<p><code>bash
+pip install torch==2.0.1+cpu torchvision==0.15.2+cpu torchaudio==2.0.2+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html</code></p>
+</li>
+</ul>
 </li>
 <li>
 <p>GPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.0.1+cu118<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.15.2+cu118<span class="w"> </span><span class="nv">torchaudio</span><span class="o">==</span><span class="m">2</span>.0.2+cu118<span class="w"> </span>-f<span class="w"> </span>https://download.pytorch.org/whl/cu118/torch_stable.html
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">torch</span><span class="o">==</span><span class="m">2</span>.0.1+cu118<span class="w"> </span><span class="nv">torchvision</span><span class="o">==</span><span class="m">0</span>.15.2+cu118<span class="w"> </span><span class="nv">torchaudio</span><span class="o">==</span><span class="m">2</span>.0.2+cu118<span class="w"> </span>-f<span class="w"> </span>https://download.pytorch.org/whl/cu118/torch_stable.html
 </span></code></pre></div>
 </li>
 <li>
@@ -7994,13 +8000,13 @@ You're not viewing the latest version.
 </li>
 <li>
 <p>Linux:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt-get<span class="w"> </span>install<span class="w"> </span>libglib2.0-0<span class="w"> </span>libsm6<span class="w"> </span>libxrender1<span class="w"> </span>libxext6
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apt-get<span class="w"> </span>install<span class="w"> </span>libglib2.0-0<span class="w"> </span>libsm6<span class="w"> </span>libxrender1<span class="w"> </span>libxext6
 </span></code></pre></div>
 </li>
 <li>
 <p>Mac:</p>
 <ul>
-<li>Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/master/installation_docs/mac_installation.md">installation guide</a></li>
+<li>Please follow this <a href="https://github.com/fastestimator/fastestimator/blob/r1.6/installation_docs/mac_installation.md">installation guide</a></li>
 </ul>
 </li>
 </ul>
@@ -8008,12 +8014,12 @@ You're not viewing the latest version.
 <ul>
 <li>
 <p>Stable:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>fastestimator
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>fastestimator
 </span></code></pre></div>
 </li>
 <li>
 <p>Nightly (Linux/Mac):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pip<span class="w"> </span>install<span class="w"> </span>fastestimator-nightly
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>fastestimator-nightly
 </span></code></pre></div>
 </li>
 </ul>
@@ -8023,12 +8029,12 @@ You're not viewing the latest version.
 <li>Stable:</li>
 <li>
 <p>GPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:latest-gpu
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:latest-gpu
 </span></code></pre></div>
 </li>
 <li>
 <p>CPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:latest-cpu
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:latest-cpu
 </span></code></pre></div>
 </li>
 <li>
@@ -8036,12 +8042,12 @@ You're not viewing the latest version.
 </li>
 <li>
 <p>GPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:nightly-gpu
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:nightly-gpu
 </span></code></pre></div>
 </li>
 <li>
 <p>CPU:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:nightly-cpu
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>fastestimator/fastestimator:nightly-cpu
 </span></code></pre></div>
 </li>
 </ul>
