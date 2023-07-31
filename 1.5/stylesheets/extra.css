@@ -55,3 +55,7 @@
 
     /* Accent color shades */
 }
+
+:root>* {
+    --md-typeset-a-color: #106ba3;
+    }
