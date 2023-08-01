@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -8063,7 +8065,7 @@ You're not viewing the latest version.
               <article class="md-content__inner md-typeset">
                 
 
-<a href="uncertainty_loss.ipynb" title="Download Notebook" class="md-content__button md-icon">
+<a href="uncertainty_loss.ipynb" title="Download Notebook" class="md-content__button md-icon" style="display:none">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg>
 </a>
 
@@ -8076,7 +8078,7 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss.html" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/fastestimator/fastestimator/raw/r1.6/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss.ipynb" title="View source of this page" class="md-content__button md-icon" style="display:none">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -9110,7 +9112,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="multi-task-learning-using-uncertainty-weighted-loss">Multi-Task Learning using Uncertainty Weighted Loss<a class="anchor-link" href="#multi-task-learning-using-uncertainty-weighted-loss">¶</a></h1><p>[<a href="https://arxiv.org/abs/1705.07115">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss.html">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss_torch.py">Torch Implementation</a>]</p>
+<h1 id="multi-task-learning-using-uncertainty-weighted-loss">Multi-Task Learning using Uncertainty Weighted Loss<a class="anchor-link" href="#multi-task-learning-using-uncertainty-weighted-loss">¶</a></h1><p>[<a href="https://arxiv.org/abs/1705.07115">Paper</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss.ipynb">Notebook</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss_tf.py">TF Implementation</a>] [<a href="https://github.com/fastestimator/fastestimator/blob/master/apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss_torch.py">Torch Implementation</a>]</p>
 <p>Multi-task learning is popular in many deep learning applications. For example, in object detection the network performs both classification and localization for each object. As a result, the final loss will be a combination of classification loss and regression loss. The most frequent way of combining two losses is by simply adding them together:</p>
 <p>$loss_{total} = loss_1 + loss_2$</p>
 <p>However, a problem emerges when the two losses are on different numerical scales. To resolve this issue, people usually manually design/experimentally determine the best weight, which is very time consuming and computationally expensive:</p>
@@ -10529,16 +10531,16 @@ GridDisplay([ImageDisplay(image=img,
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.view", "navigation.top", "navigation.tabs", "navigation.footer", "navigation.indexespip", "toc.follow"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
       
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
         <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
         <script src="../../../javascripts/version-mike.js"></script>
       
