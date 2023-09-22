@@ -1,0 +1,73 @@
+.jp-CodeCell>.jp-Cell-inputWrapper {
+    direction: rtl;
+    width: 113%;
+}
+
+.jp-InputArea-prompt {
+    visibility: hidden;
+}
+
+.jp-OutputArea-prompt {
+    visibility: hidden;
+    /* disable this to tune the position */
+    background-color: red;
+    position: absolute;
+    right: 0;
+
+}
+
+.jp-CodeCell>.jp-Cell-outputWrapper {
+    margin-top: -10px;
+    padding-top: 0;
+    display: table-cell;
+    text-align: left;
+}
+
+.jp-Cell-outputWrapper>.jp-Cell-outputCollapser {
+    /* background-color:red; */
+    margin-top: -17px;
+}
+
+.jupyter-wrapper .zeroclipboard-container {
+    display: none;
+}
+
+.jupyter-wrapper .celltoolbar {
+    visibility: hidden;
+    margin-top: -29px;
+}
+
+.jupyter-wrapper .jp-OutputArea-output pre {
+    border: none;
+    padding: 0px;
+    overflow-x: auto;
+    overflow-y: auto;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    height: auto;
+    max-height: 300px;
+}
+
+.md-version {
+    flex-shrink: 0;
+    font-size: .7rem;
+    font-weight: normal;
+    height: 2.4rem;
+}
+
+.md-version__item {
+    line-height: 1.5rem;
+}
+
+:root {
+
+    /* Primary color shades */
+    --md-primary-fg-color: #23153c;
+
+    /* Accent color shades */
+}
+
+:root>* {
+    --md-typeset-a-color: #106ba3;
+    }
