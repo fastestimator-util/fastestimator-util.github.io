@@ -34,7 +34,7 @@ def clean_search(config: MkDocsConfig):
 def update_source_url(html):
     pattern = r'(<a\s*href="https:\/\/github\.com\/fastestimator\/fastestimator\/)(raw)(\/\S+.)(md)"'
     html = re.sub(pattern, fr'\1blob\3py"', html)
-    html = re.sub(r'https:(.+)(\/blob\/)master(\/installation_docs.+).md', fr'https:\1\2r1.2\3.md', html)
+    html = re.sub(r'https:(.+)(\/blob\/)master(\/installation_docs.+).md', fr'https:\1\2r1.1\3.md', html)
 
     html = re.sub(r'<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text\/html">\s*?<script type="text\/javascript">.*?<\/script>\s*?<\/div>', "", html, flags=re.S)
 
