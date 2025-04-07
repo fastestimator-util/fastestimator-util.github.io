@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.op.tensorop.loss.mean_squared_error

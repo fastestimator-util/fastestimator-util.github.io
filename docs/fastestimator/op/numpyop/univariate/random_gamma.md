@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.op.numpyop.univariate.random_gamma

@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.op.tensorop.loss.cross_entropy

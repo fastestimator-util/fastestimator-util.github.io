@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.search.golden_section

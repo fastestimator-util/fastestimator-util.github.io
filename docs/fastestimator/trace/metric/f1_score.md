@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.trace.metric.f1_score
