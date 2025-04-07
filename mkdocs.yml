@@ -1,0 +1,553 @@
+edit_uri: blob/r1.7/
+extra:
+  generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/fastestimator/fastestimator
+  - icon: fontawesome/brands/docker
+    link: https://hub.docker.com/r/fastestimator/fastestimator
+  version:
+    provider: mike
+extra_css:
+- stylesheets/extra.css
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+extra_javascript:
+- javascripts/extra.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+- javascripts/version-mike.js
+hooks:
+- docs/hooks.py
+markdown_extensions:
+- attr_list
+- admonition
+- codehilite
+- def_list
+- md_in_html
+- sane_lists
+- pymdownx.details
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.snippets:
+    base_path:
+    - docs
+- pymdownx.magiclink
+- pymdownx.emoji:
+    emoji_generator: !!python/name:materialx.emoji.to_svg ''
+    emoji_index: !!python/name:materialx.emoji.twemoji ''
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
+- toc:
+    permalink: true
+    separator: _
+nav:
+- Home: index.md
+- Install: installation.md
+- Apphubs:
+  - Overview: apphub/README.md
+  - Anomaly Detection:
+    - Adversarially Learned One-Class Classifier for Novelty Detection: apphub/anomaly_detection/alocc/alocc.ipynb
+  - Multi-task Learning:
+    - Uncertainty Weighted Loss: apphub/multi_task_learning/uncertainty_weighted_loss/uncertainty_loss.ipynb
+  - Instance Segmentation:
+    - SOLOv2: apphub/instance_segmentation/solov2/solov2.ipynb
+  - Instance Detection:
+    - YOLOv5: apphub/instance_detection/yolov5/yolov5.ipynb
+    - RetinaNet: apphub/instance_detection/retinanet/retinanet.ipynb
+  - Learning Rate Scheduling:
+    - Super Convergence: apphub/lr_controller/super_convergence/super_convergence.ipynb
+  - Foundation Model:
+    - GPT: apphub/foundation_model/gpt/gpt.ipynb
+    - Low-Rank Adaptation: apphub/foundation_model/lora/lora.ipynb
+  - Image Generation:
+    - CVAE: apphub/image_generation/cvae/cvae.ipynb
+    - PGGAN: apphub/image_generation/pggan/pggan.ipynb
+    - DCGAN: apphub/image_generation/dcgan/dcgan.ipynb
+    - Cycle-GAN: apphub/image_generation/cyclegan/cyclegan.ipynb
+    - Stable-Diffusion: apphub/image_generation/stable_diffusion/stable_diffusion.ipynb
+  - Neural Architecture Search:
+    - Neural Architecture Search without Training (NASWOT): apphub/neural_architecture_search/naswot/naswot.ipynb
+  - Adversarial Training:
+    - Fast Gradient Sign Method: apphub/adversarial_training/fgsm/fgsm.ipynb
+    - Adversarial Robustness with Error Correcting Codes (and Hinge Loss): apphub/adversarial_training/ecc_hinge/ecc_hinge.ipynb
+    - Adversarial Robustness with Error Correcting Codes: apphub/adversarial_training/ecc/ecc.ipynb
+  - Tabular Data:
+    - DNN: apphub/tabular/dnn/dnn.ipynb
+  - Contrastive Learning:
+    - SimCLR: apphub/contrastive_learning/simclr/simclr.ipynb
+  - AutoML:
+    - RandAugment: apphub/automl/rand_augment/rand_augment.ipynb
+  - Curriculum Learning:
+    - SuperLoss: apphub/curriculum_learning/superloss/superloss.ipynb
+  - One-shot Learning:
+    - Siamese Network: apphub/one_shot_learning/siamese_network/siamese.ipynb
+  - Keypoint Detection:
+    - HRNet: apphub/keypoint_detection/hrnet/hrnet.ipynb
+  - Natural Language Processing (NLP):
+    - Neural Machine Translation: apphub/NLP/neural_machine_translation/transformer.ipynb
+    - Named Entity Recognition: apphub/NLP/named_entity_recognition/bert.ipynb
+    - Text Classification: apphub/NLP/imdb/imdb.ipynb
+    - Language Modeling: apphub/NLP/language_modeling/ptb.ipynb
+  - Image Style Transfer:
+    - Fast Style Transfer: apphub/style_transfer/fst_coco/fst.ipynb
+  - Semantic Segmentation:
+    - Line Search: apphub/semantic_segmentation/line_search/line_search.ipynb
+    - UNet: apphub/semantic_segmentation/unet/unet.ipynb
+    - UNet3D 3plus: apphub/semantic_segmentation/unet3d_3plus/unet3d_3plus.ipynb
+  - Image Classification:
+    - MNIST: apphub/image_classification/mnist/mnist.ipynb
+    - Pyramid Network: apphub/image_classification/pyramidnet/pyramidnet.ipynb
+    - Vision Transformer: apphub/image_classification/vit/vit.ipynb
+    - LeViT: apphub/image_classification/levit/levit.ipynb
+    - CIFAR-10 Fast: apphub/image_classification/cifar10_fast/cifar10_fast.ipynb
+- Tutorials:
+  - Beginner Tutorials:
+    - 'Tutorial 1: Getting Started': tutorial/beginner/t01_getting_started.ipynb
+    - 'Tutorial 2: Creating a FastEstimator dataset': tutorial/beginner/t02_dataset.ipynb
+    - 'Tutorial 3: Operator': tutorial/beginner/t03_operator.ipynb
+    - 'Tutorial 4: Pipeline': tutorial/beginner/t04_pipeline.ipynb
+    - 'Tutorial 5: Model': tutorial/beginner/t05_model.ipynb
+    - 'Tutorial 6: Network ': tutorial/beginner/t06_network.ipynb
+    - 'Tutorial 7: Estimator': tutorial/beginner/t07_estimator.ipynb
+    - 'Tutorial 8: Mode': tutorial/beginner/t08_mode.ipynb
+    - 'Tutorial 9: Inference': tutorial/beginner/t09_inference.ipynb
+    - 'Tutorial 10: How to use CLI': tutorial/beginner/t10_cli.md
+    - 'Tutorial 11: Debugging': tutorial/beginner/t11_debugging.ipynb
+    - 'Tutorial 12: Visualization': tutorial/beginner/t12_visualization.ipynb
+  - Advanced Tutorials:
+    - 'Advanced Tutorial 1: Dataset': tutorial/advanced/t01_dataset.ipynb
+    - 'Advanced Tutorial 2: Pipeline': tutorial/advanced/t02_pipeline.ipynb
+    - 'Advanced Tutorial 3: Operator': tutorial/advanced/t03_operator.ipynb
+    - 'Advanced Tutorial 4: Trace': tutorial/advanced/t04_trace.ipynb
+    - 'Advanced Tutorial 5: Scheduler': tutorial/advanced/t05_scheduler.ipynb
+    - 'Advanced Tutorial 6: Summary': tutorial/advanced/t06_summary.ipynb
+    - 'Advanced Tutorial 7: Learning Rate Scheduling': tutorial/advanced/t07_learning_rate_scheduling.ipynb
+    - 'Advanced Tutorial 8: Explainable AI (XAI)': tutorial/advanced/t08_xai.ipynb
+    - 'Advanced Tutorial 9: Meta Ops': tutorial/advanced/t09_meta_ops.ipynb
+    - 'Advanced Tutorial 10: Automated Report Generation': tutorial/advanced/t10_report_generation.ipynb
+    - 'Advanced Tutorial 11: Model Calibration': tutorial/advanced/t11_model_calibration.ipynb
+    - 'Advanced Tutorial 12: Hyperparameter Search': tutorial/advanced/t12_hyperparameter_search.ipynb
+    - 'Advanced Tutorial 13: Multi-Dataset Training and Evaluation': tutorial/advanced/t13_multi-dataset_training_evaluation.ipynb
+    - 'Advanced Tutorial 14: Ops with Custom Data Loaders': tutorial/advanced/t14_custom_loaders.ipynb
+    - 'Advanced Tutorial 15: Finetuning Tutorial': tutorial/advanced/t15_finetuning.ipynb
+    - 'Advanced Tutorial 16: Model Robustness': tutorial/advanced/t16_robustness.ipynb
+    - 'Advanced Tutorial 17: Slicer': tutorial/advanced/t17_slicer.ipynb
+  - XAI Tutorials:
+    - 'XAI Tutorial 1: Label Tracking': tutorial/xai/t01_label_tracking.ipynb
+    - 'XAI Tutorial 2: Instance Tracking': tutorial/xai/t02_instance_tracking.ipynb
+    - 'XAI Tutorial 3: Saliency Maps': tutorial/xai/t03_saliency.ipynb
+    - 'XAI Tutorial 4: EigenCAM': tutorial/xai/t04_eigencam.ipynb
+    - 'XAI Tutorial 5: GradCAM': tutorial/xai/t05_gradcam.ipynb
+- API:
+  - fe:
+    - estimator: fastestimator/estimator.md
+    - network: fastestimator/network.md
+    - pipeline: fastestimator/pipeline.md
+  - fe.schedule:
+    - lr_schedule: fastestimator/schedule/lr_schedule.md
+    - schedule: fastestimator/schedule/schedule.md
+  - fe.trace:
+    - trace: fastestimator/trace/trace.md
+    - fe.trace.adapt:
+      - lr_scheduler: fastestimator/trace/adapt/lr_scheduler.md
+      - terminate_on_nan: fastestimator/trace/adapt/terminate_on_nan.md
+      - reduce_lr_on_plateau: fastestimator/trace/adapt/reduce_lr_on_plateau.md
+      - pbm_calibrator: fastestimator/trace/adapt/pbm_calibrator.md
+      - early_stopping: fastestimator/trace/adapt/early_stopping.md
+    - fe.trace.io:
+      - model_saver: fastestimator/trace/io/model_saver.md
+      - image_saver: fastestimator/trace/io/image_saver.md
+      - image_viewer: fastestimator/trace/io/image_viewer.md
+      - restore_wizard: fastestimator/trace/io/restore_wizard.md
+      - test_report: fastestimator/trace/io/test_report.md
+      - best_model_saver: fastestimator/trace/io/best_model_saver.md
+      - csv_logger: fastestimator/trace/io/csv_logger.md
+      - traceability: fastestimator/trace/io/traceability.md
+      - grid_display: fastestimator/trace/io/grid_display.md
+      - batch_display: fastestimator/trace/io/batch_display.md
+      - tensorboard: fastestimator/trace/io/tensorboard.md
+    - fe.trace.meta:
+      - _per_ds: fastestimator/trace/meta/_per_ds.md
+    - fe.trace.xai:
+      - label_tracker: fastestimator/trace/xai/label_tracker.md
+      - grad_cam: fastestimator/trace/xai/grad_cam.md
+      - saliency: fastestimator/trace/xai/saliency.md
+      - eigen_cam: fastestimator/trace/xai/eigen_cam.md
+      - instance_tracker: fastestimator/trace/xai/instance_tracker.md
+    - fe.trace.metric:
+      - bleu_score: fastestimator/trace/metric/bleu_score.md
+      - recall: fastestimator/trace/metric/recall.md
+      - calibration_error: fastestimator/trace/metric/calibration_error.md
+      - f1_score: fastestimator/trace/metric/f1_score.md
+      - dice: fastestimator/trace/metric/dice.md
+      - precision: fastestimator/trace/metric/precision.md
+      - mean_average_precision: fastestimator/trace/metric/mean_average_precision.md
+      - accuracy: fastestimator/trace/metric/accuracy.md
+      - mcc: fastestimator/trace/metric/mcc.md
+      - confusion_matrix: fastestimator/trace/metric/confusion_matrix.md
+      - auc: fastestimator/trace/metric/auc.md
+  - fe.layers:
+    - fe.layers.tensorflow:
+      - hadamard: fastestimator/layers/tensorflow/hadamard.md
+      - instance_norm: fastestimator/layers/tensorflow/instance_norm.md
+      - reflection_padding_2d: fastestimator/layers/tensorflow/reflection_padding_2d.md
+    - fe.layers.pytorch:
+      - cropping_2d: fastestimator/layers/pytorch/cropping_2d.md
+      - hadamard: fastestimator/layers/pytorch/hadamard.md
+  - fe.test:
+    - unittest_util: fastestimator/test/unittest_util.md
+    - nightly_util: fastestimator/test/nightly_util.md
+  - fe.util:
+    - google_download_util: fastestimator/util/google_download_util.md
+    - base_util: fastestimator/util/base_util.md
+    - traceability_util: fastestimator/util/traceability_util.md
+    - util: fastestimator/util/util.md
+    - wget_util: fastestimator/util/wget_util.md
+    - img_data: fastestimator/util/img_data.md
+    - latex_util: fastestimator/util/latex_util.md
+    - cli_util: fastestimator/util/cli_util.md
+    - data: fastestimator/util/data.md
+  - fe.slicer:
+    - axis_slicer: fastestimator/slicer/axis_slicer.md
+    - mean_unslicer: fastestimator/slicer/mean_unslicer.md
+    - slicer: fastestimator/slicer/slicer.md
+    - sliding_slicer: fastestimator/slicer/sliding_slicer.md
+  - fe.op:
+    - fe.op.numpyop:
+      - fe.op.numpyop.multivariate:
+        - pad_if_needed: fastestimator/op/numpyop/multivariate/pad_if_needed.md
+        - smallest_max_size: fastestimator/op/numpyop/multivariate/smallest_max_size.md
+        - read_mat: fastestimator/op/numpyop/multivariate/read_mat.md
+        - crop_and_pad: fastestimator/op/numpyop/multivariate/crop_and_pad.md
+        - random_sized_crop: fastestimator/op/numpyop/multivariate/random_sized_crop.md
+        - mask_dropout: fastestimator/op/numpyop/multivariate/mask_dropout.md
+        - random_rotate_90: fastestimator/op/numpyop/multivariate/random_rotate_90.md
+        - random_scale: fastestimator/op/numpyop/multivariate/random_scale.md
+        - optical_distortion: fastestimator/op/numpyop/multivariate/optical_distortion.md
+        - center_crop: fastestimator/op/numpyop/multivariate/center_crop.md
+        - affine: fastestimator/op/numpyop/multivariate/affine.md
+        - bbox_safe_random_crop: fastestimator/op/numpyop/multivariate/bbox_safe_random_crop.md
+        - crop_non_empty_mask_if_exists: fastestimator/op/numpyop/multivariate/crop_non_empty_mask_if_exists.md
+        - crop: fastestimator/op/numpyop/multivariate/crop.md
+        - resize: fastestimator/op/numpyop/multivariate/resize.md
+        - random_crop_from_borders: fastestimator/op/numpyop/multivariate/random_crop_from_borders.md
+        - transpose: fastestimator/op/numpyop/multivariate/transpose.md
+        - random_sized_bbox_safe_crop: fastestimator/op/numpyop/multivariate/random_sized_bbox_safe_crop.md
+        - multivariate: fastestimator/op/numpyop/multivariate/multivariate.md
+        - horizontal_flip: fastestimator/op/numpyop/multivariate/horizontal_flip.md
+        - flip: fastestimator/op/numpyop/multivariate/flip.md
+        - random_resized_crop: fastestimator/op/numpyop/multivariate/random_resized_crop.md
+        - grid_distortion: fastestimator/op/numpyop/multivariate/grid_distortion.md
+        - rotate: fastestimator/op/numpyop/multivariate/rotate.md
+        - random_grid_shuffle: fastestimator/op/numpyop/multivariate/random_grid_shuffle.md
+        - random_crop_near_bbox: fastestimator/op/numpyop/multivariate/random_crop_near_bbox.md
+        - longest_max_size: fastestimator/op/numpyop/multivariate/longest_max_size.md
+        - random_crop: fastestimator/op/numpyop/multivariate/random_crop.md
+        - elastic_transform: fastestimator/op/numpyop/multivariate/elastic_transform.md
+        - shift_scale_rotate: fastestimator/op/numpyop/multivariate/shift_scale_rotate.md
+        - vertical_flip: fastestimator/op/numpyop/multivariate/vertical_flip.md
+      - fe.op.numpyop.meta:
+        - one_of: fastestimator/op/numpyop/meta/one_of.md
+        - sometimes: fastestimator/op/numpyop/meta/sometimes.md
+        - repeat: fastestimator/op/numpyop/meta/repeat.md
+        - fuse: fastestimator/op/numpyop/meta/fuse.md
+      - numpyop: fastestimator/op/numpyop/numpyop.md
+      - fe.op.numpyop.univariate:
+        - hue_saturation_value: fastestimator/op/numpyop/univariate/hue_saturation_value.md
+        - clahe: fastestimator/op/numpyop/univariate/clahe.md
+        - solarize: fastestimator/op/numpyop/univariate/solarize.md
+        - to_array: fastestimator/op/numpyop/univariate/to_array.md
+        - random_shapes: fastestimator/op/numpyop/univariate/random_shapes.md
+        - univariate: fastestimator/op/numpyop/univariate/univariate.md
+        - gaussian_blur: fastestimator/op/numpyop/univariate/gaussian_blur.md
+        - color: fastestimator/op/numpyop/univariate/color.md
+        - random_fog: fastestimator/op/numpyop/univariate/random_fog.md
+        - random_snow: fastestimator/op/numpyop/univariate/random_snow.md
+        - from_float: fastestimator/op/numpyop/univariate/from_float.md
+        - random_sun_flare: fastestimator/op/numpyop/univariate/random_sun_flare.md
+        - multiplicative_noise: fastestimator/op/numpyop/univariate/multiplicative_noise.md
+        - channel_transpose: fastestimator/op/numpyop/univariate/channel_transpose.md
+        - random_gamma: fastestimator/op/numpyop/univariate/random_gamma.md
+        - normalize: fastestimator/op/numpyop/univariate/normalize.md
+        - onehot: fastestimator/op/numpyop/univariate/onehot.md
+        - reshape: fastestimator/op/numpyop/univariate/reshape.md
+        - iso_noise: fastestimator/op/numpyop/univariate/iso_noise.md
+        - zoom_blur: fastestimator/op/numpyop/univariate/zoom_blur.md
+        - rgb_shift: fastestimator/op/numpyop/univariate/rgb_shift.md
+        - fda: fastestimator/op/numpyop/univariate/fda.md
+        - word_to_id: fastestimator/op/numpyop/univariate/word_to_id.md
+        - rua: fastestimator/op/numpyop/univariate/rua.md
+        - hadamard: fastestimator/op/numpyop/univariate/hadamard.md
+        - equalize: fastestimator/op/numpyop/univariate/equalize.md
+        - color_jitter: fastestimator/op/numpyop/univariate/color_jitter.md
+        - median_blur: fastestimator/op/numpyop/univariate/median_blur.md
+        - defocus: fastestimator/op/numpyop/univariate/defocus.md
+        - blur: fastestimator/op/numpyop/univariate/blur.md
+        - pad_sequence: fastestimator/op/numpyop/univariate/pad_sequence.md
+        - to_float: fastestimator/op/numpyop/univariate/to_float.md
+        - expand_dims: fastestimator/op/numpyop/univariate/expand_dims.md
+        - random_rain: fastestimator/op/numpyop/univariate/random_rain.md
+        - translate_x: fastestimator/op/numpyop/univariate/translate_x.md
+        - autocontrast: fastestimator/op/numpyop/univariate/autocontrast.md
+        - binarize: fastestimator/op/numpyop/univariate/binarize.md
+        - calibate: fastestimator/op/numpyop/univariate/calibate.md
+        - invert_img: fastestimator/op/numpyop/univariate/invert_img.md
+        - channel_shuffle: fastestimator/op/numpyop/univariate/channel_shuffle.md
+        - image_compression: fastestimator/op/numpyop/univariate/image_compression.md
+        - translate_y: fastestimator/op/numpyop/univariate/translate_y.md
+        - to_sepia: fastestimator/op/numpyop/univariate/to_sepia.md
+        - coarse_dropout: fastestimator/op/numpyop/univariate/coarse_dropout.md
+        - read_image: fastestimator/op/numpyop/univariate/read_image.md
+        - random_brightness_contrast: fastestimator/op/numpyop/univariate/random_brightness_contrast.md
+        - minmax: fastestimator/op/numpyop/univariate/minmax.md
+        - posterize: fastestimator/op/numpyop/univariate/posterize.md
+        - sharpness: fastestimator/op/numpyop/univariate/sharpness.md
+        - pixel_distribution_adaptation: fastestimator/op/numpyop/univariate/pixel_distribution_adaptation.md
+        - brightness: fastestimator/op/numpyop/univariate/brightness.md
+        - gaussian_noise: fastestimator/op/numpyop/univariate/gaussian_noise.md
+        - motion_blur: fastestimator/op/numpyop/univariate/motion_blur.md
+        - histogram_matching: fastestimator/op/numpyop/univariate/histogram_matching.md
+        - shear_y: fastestimator/op/numpyop/univariate/shear_y.md
+        - downscale: fastestimator/op/numpyop/univariate/downscale.md
+        - to_gray: fastestimator/op/numpyop/univariate/to_gray.md
+        - tokenize: fastestimator/op/numpyop/univariate/tokenize.md
+        - channel_dropout: fastestimator/op/numpyop/univariate/channel_dropout.md
+        - random_shadow: fastestimator/op/numpyop/univariate/random_shadow.md
+        - shear_x: fastestimator/op/numpyop/univariate/shear_x.md
+        - contrast: fastestimator/op/numpyop/univariate/contrast.md
+    - op: fastestimator/op/op.md
+    - fe.op.tensorop:
+      - fe.op.tensorop.gradient:
+        - fgsm: fastestimator/op/tensorop/gradient/fgsm.md
+        - gradient: fastestimator/op/tensorop/gradient/gradient.md
+        - watch: fastestimator/op/tensorop/gradient/watch.md
+      - fe.op.tensorop.augmentation:
+        - cutmix_batch: fastestimator/op/tensorop/augmentation/cutmix_batch.md
+        - mixup_batch: fastestimator/op/tensorop/augmentation/mixup_batch.md
+      - tensorop: fastestimator/op/tensorop/tensorop.md
+      - gather: fastestimator/op/tensorop/gather.md
+      - permute: fastestimator/op/tensorop/permute.md
+      - fe.op.tensorop.loss:
+        - mean_squared_error: fastestimator/op/tensorop/loss/mean_squared_error.md
+        - cross_entropy: fastestimator/op/tensorop/loss/cross_entropy.md
+        - dice_loss: fastestimator/op/tensorop/loss/dice_loss.md
+        - l1_loss: fastestimator/op/tensorop/loss/l1_loss.md
+        - focal_loss: fastestimator/op/tensorop/loss/focal_loss.md
+        - loss: fastestimator/op/tensorop/loss/loss.md
+        - hinge: fastestimator/op/tensorop/loss/hinge.md
+        - l2_regularization: fastestimator/op/tensorop/loss/l2_regularization.md
+        - super_loss: fastestimator/op/tensorop/loss/super_loss.md
+      - normalize: fastestimator/op/tensorop/normalize.md
+      - reshape: fastestimator/op/tensorop/reshape.md
+      - resize3d: fastestimator/op/tensorop/resize3d.md
+      - fe.op.tensorop.meta:
+        - one_of: fastestimator/op/tensorop/meta/one_of.md
+        - sometimes: fastestimator/op/tensorop/meta/sometimes.md
+        - repeat: fastestimator/op/tensorop/meta/repeat.md
+        - fuse: fastestimator/op/tensorop/meta/fuse.md
+      - argmax: fastestimator/op/tensorop/argmax.md
+      - fe.op.tensorop.model:
+        - update: fastestimator/op/tensorop/model/update.md
+        - model: fastestimator/op/tensorop/model/model.md
+      - average: fastestimator/op/tensorop/average.md
+      - un_hadamard: fastestimator/op/tensorop/un_hadamard.md
+  - fe.dataset:
+    - op_dataset: fastestimator/dataset/op_dataset.md
+    - dir_dataset: fastestimator/dataset/dir_dataset.md
+    - batch_dataset: fastestimator/dataset/batch_dataset.md
+    - combined_dataset: fastestimator/dataset/combined_dataset.md
+    - pickle_dataset: fastestimator/dataset/pickle_dataset.md
+    - labeled_dir_dataset: fastestimator/dataset/labeled_dir_dataset.md
+    - dataset: fastestimator/dataset/dataset.md
+    - interleave_dataset: fastestimator/dataset/interleave_dataset.md
+    - siamese_dir_dataset: fastestimator/dataset/siamese_dir_dataset.md
+    - csv_dataset: fastestimator/dataset/csv_dataset.md
+    - dataloader: fastestimator/dataset/dataloader.md
+    - numpy_dataset: fastestimator/dataset/numpy_dataset.md
+    - fe.dataset.data:
+      - tednmt: fastestimator/dataset/data/tednmt.md
+      - skl_digits: fastestimator/dataset/data/skl_digits.md
+      - penn_treebank: fastestimator/dataset/data/penn_treebank.md
+      - medmnist: fastestimator/dataset/data/medmnist.md
+      - cifair10: fastestimator/dataset/data/cifair10.md
+      - svhn_cropped: fastestimator/dataset/data/svhn_cropped.md
+      - mendeley: fastestimator/dataset/data/mendeley.md
+      - cifar100: fastestimator/dataset/data/cifar100.md
+      - usps: fastestimator/dataset/data/usps.md
+      - wikitext_103: fastestimator/dataset/data/wikitext_103.md
+      - food101: fastestimator/dataset/data/food101.md
+      - montgomery: fastestimator/dataset/data/montgomery.md
+      - mitmovie_ner: fastestimator/dataset/data/mitmovie_ner.md
+      - em_3d: fastestimator/dataset/data/em_3d.md
+      - cifair100: fastestimator/dataset/data/cifair100.md
+      - svhn: fastestimator/dataset/data/svhn.md
+      - unnatural_instructions: fastestimator/dataset/data/unnatural_instructions.md
+      - nih_chestxray: fastestimator/dataset/data/nih_chestxray.md
+      - mscoco: fastestimator/dataset/data/mscoco.md
+      - shakespeare: fastestimator/dataset/data/shakespeare.md
+      - cifar10: fastestimator/dataset/data/cifar10.md
+      - tiny_imagenet: fastestimator/dataset/data/tiny_imagenet.md
+      - pascal_voc: fastestimator/dataset/data/pascal_voc.md
+      - breast_cancer: fastestimator/dataset/data/breast_cancer.md
+      - cub200: fastestimator/dataset/data/cub200.md
+      - imdb_review: fastestimator/dataset/data/imdb_review.md
+      - mnist: fastestimator/dataset/data/mnist.md
+      - horse2zebra: fastestimator/dataset/data/horse2zebra.md
+      - omniglot: fastestimator/dataset/data/omniglot.md
+    - generator_dataset: fastestimator/dataset/generator_dataset.md
+    - extend_dataset: fastestimator/dataset/extend_dataset.md
+  - fe.backend:
+    - _check_nan: fastestimator/backend/_check_nan.md
+    - _ones_like: fastestimator/backend/_ones_like.md
+    - _convert_tensor_precision: fastestimator/backend/_convert_tensor_precision.md
+    - _permute: fastestimator/backend/_permute.md
+    - _save_model: fastestimator/backend/_save_model.md
+    - _binary_crossentropy: fastestimator/backend/_binary_crossentropy.md
+    - _reduce_min: fastestimator/backend/_reduce_min.md
+    - _update_model: fastestimator/backend/_update_model.md
+    - _exp: fastestimator/backend/_exp.md
+    - _tensor_round: fastestimator/backend/_tensor_round.md
+    - _zeros_like: fastestimator/backend/_zeros_like.md
+    - _roll: fastestimator/backend/_roll.md
+    - _where: fastestimator/backend/_where.md
+    - _sign: fastestimator/backend/_sign.md
+    - _tensor_sqrt: fastestimator/backend/_tensor_sqrt.md
+    - _reshape: fastestimator/backend/_reshape.md
+    - _clip_by_value: fastestimator/backend/_clip_by_value.md
+    - _to_type: fastestimator/backend/_to_type.md
+    - _iwd: fastestimator/backend/_iwd.md
+    - _to_shape: fastestimator/backend/_to_shape.md
+    - _sparse_categorical_crossentropy: fastestimator/backend/_sparse_categorical_crossentropy.md
+    - _set_lr: fastestimator/backend/_set_lr.md
+    - _flip: fastestimator/backend/_flip.md
+    - _load_model: fastestimator/backend/_load_model.md
+    - _zscore: fastestimator/backend/_zscore.md
+    - _resize3d: fastestimator/backend/_resize3d.md
+    - _get_gradient: fastestimator/backend/_get_gradient.md
+    - _reduce_sum: fastestimator/backend/_reduce_sum.md
+    - _get_lr: fastestimator/backend/_get_lr.md
+    - _l1_loss: fastestimator/backend/_l1_loss.md
+    - _get_image_dims: fastestimator/backend/_get_image_dims.md
+    - _tensor_normalize: fastestimator/backend/_tensor_normalize.md
+    - _expand_dims: fastestimator/backend/_expand_dims.md
+    - _argmax: fastestimator/backend/_argmax.md
+    - _maximum: fastestimator/backend/_maximum.md
+    - _lambertw: fastestimator/backend/_lambertw.md
+    - _categorical_crossentropy: fastestimator/backend/_categorical_crossentropy.md
+    - _percentile: fastestimator/backend/_percentile.md
+    - _to_tensor: fastestimator/backend/_to_tensor.md
+    - _tensor_pow: fastestimator/backend/_tensor_pow.md
+    - _gather_from_batch: fastestimator/backend/_gather_from_batch.md
+    - _random_normal_like: fastestimator/backend/_random_normal_like.md
+    - _abs: fastestimator/backend/_abs.md
+    - _watch: fastestimator/backend/_watch.md
+    - _random_uniform_like: fastestimator/backend/_random_uniform_like.md
+    - _reduce_max: fastestimator/backend/_reduce_max.md
+    - _hinge: fastestimator/backend/_hinge.md
+    - _reduce_std: fastestimator/backend/_reduce_std.md
+    - _concat: fastestimator/backend/_concat.md
+    - _transpose: fastestimator/backend/_transpose.md
+    - _smooth_l1_loss: fastestimator/backend/_smooth_l1_loss.md
+    - _l2_regularization: fastestimator/backend/_l2_regularization.md
+    - _get_shape: fastestimator/backend/_get_shape.md
+    - _squeeze: fastestimator/backend/_squeeze.md
+    - _pow: fastestimator/backend/_pow.md
+    - _huber: fastestimator/backend/_huber.md
+    - _dice_score: fastestimator/backend/_dice_score.md
+    - _matmul: fastestimator/backend/_matmul.md
+    - _mean_squared_error: fastestimator/backend/_mean_squared_error.md
+    - _feed_forward: fastestimator/backend/_feed_forward.md
+    - _gather: fastestimator/backend/_gather.md
+    - _focal_loss: fastestimator/backend/_focal_loss.md
+    - _cast: fastestimator/backend/_cast.md
+    - _reduce_mean: fastestimator/backend/_reduce_mean.md
+  - fe.cli:
+    - run: fastestimator/cli/run.md
+    - plot: fastestimator/cli/plot.md
+    - logs: fastestimator/cli/logs.md
+    - train: fastestimator/cli/train.md
+    - main: fastestimator/cli/main.md
+    - history: fastestimator/cli/history.md
+  - fe.xai:
+    - saliency: fastestimator/xai/saliency.md
+  - fe.search:
+    - fe.search.visualize:
+      - heatmap: fastestimator/search/visualize/heatmap.md
+      - parallel_coordinate_plot: fastestimator/search/visualize/parallel_coordinate_plot.md
+      - visualize: fastestimator/search/visualize/visualize.md
+      - vis_util: fastestimator/search/visualize/vis_util.md
+      - cartesian: fastestimator/search/visualize/cartesian.md
+    - grid_search: fastestimator/search/grid_search.md
+    - search: fastestimator/search/search.md
+    - golden_section: fastestimator/search/golden_section.md
+  - fe.architecture:
+    - fe.architecture.tensorflow:
+      - unet: fastestimator/architecture/tensorflow/unet.md
+      - lenet: fastestimator/architecture/tensorflow/lenet.md
+      - resnet9: fastestimator/architecture/tensorflow/resnet9.md
+      - wideresnet: fastestimator/architecture/tensorflow/wideresnet.md
+      - attention_unet: fastestimator/architecture/tensorflow/attention_unet.md
+    - fe.architecture.pytorch:
+      - unet: fastestimator/architecture/pytorch/unet.md
+      - lenet: fastestimator/architecture/pytorch/lenet.md
+      - resnet9: fastestimator/architecture/pytorch/resnet9.md
+      - wideresnet: fastestimator/architecture/pytorch/wideresnet.md
+      - attention_unet: fastestimator/architecture/pytorch/attention_unet.md
+  - fe.summary:
+    - system: fastestimator/summary/system.md
+    - summary: fastestimator/summary/summary.md
+    - fe.summary.logs:
+      - log_parse: fastestimator/summary/logs/log_parse.md
+      - log_plot: fastestimator/summary/logs/log_plot.md
+    - history: fastestimator/summary/history.md
+plugins:
+- mkdocs-jupyter:
+    include:
+    - '*.ipynb'
+    include_source: false
+- mkdocstrings:
+    handlers:
+      python:
+        options:
+          filters:
+          - '!^_'
+          docstring_options:
+            ignore_init_summary: true
+          heading_level: 3
+          show_root_toc_entry: false
+          show_signature: false
+- search
+repo_name: fastestimator/fastestimator
+repo_url: https://github.com/fastestimator/fastestimator
+site_name: FastEstimator
+theme:
+  custom_dir: docs/overrides
+  favicon: overrides/assets/images/favicon.ico
+  logo: overrides/assets/images/favicon.ico
+  features:
+  - content.code.copy
+  - content.action.view
+  - navigation.top
+  - navigation.tabs
+  - navigation.footer
+  - navigation.indexespip
+  - toc.follow
+  highlightjs: true
+  hijs_languages:
+  - python
+  icon:
+    repo: fontawesome/brands/git-alt
+  include_homepage_in_sidebar: false
+  name: material
+  palette:
+  - accent: amber
+    primary: custom
+    scheme: default
+use_directory_urls: false

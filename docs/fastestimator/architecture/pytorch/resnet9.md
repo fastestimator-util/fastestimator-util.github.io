@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.architecture.pytorch.resnet9
