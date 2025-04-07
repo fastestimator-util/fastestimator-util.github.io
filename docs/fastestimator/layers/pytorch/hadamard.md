@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.layers.pytorch.hadamard

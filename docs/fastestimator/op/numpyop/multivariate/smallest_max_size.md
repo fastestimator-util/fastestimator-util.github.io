@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.op.numpyop.multivariate.smallest_max_size

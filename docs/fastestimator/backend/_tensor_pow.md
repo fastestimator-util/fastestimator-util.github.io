@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.backend._tensor_pow
