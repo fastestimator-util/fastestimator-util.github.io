@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.trace.metric.mean_average_precision

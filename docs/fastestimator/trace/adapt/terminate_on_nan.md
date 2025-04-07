@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.trace.adapt.terminate_on_nan

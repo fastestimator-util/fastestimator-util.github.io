@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.dataset.data.tiny_imagenet

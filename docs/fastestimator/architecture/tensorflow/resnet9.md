@@ -1,0 +1,1 @@
+::: fastestimator.fastestimator.architecture.tensorflow.resnet9
